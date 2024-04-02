@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1205FAU21 DeepLearning Inference Dynamic Results Summary</title>
+</head>
+<body style="background-color:black">
+
+
+<h1 style="font-weight: bold; color: white; background-color: #1A5C8D; padding: 40px;">1205FAU21 DeepLearning Inference Dynamic Results Inferences</h1>
+<a href="../Dynamic_Results_Summary.html" style="display: inline-block; background-color: #007bff; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;"> <---   Last Page</a>
+
+
+
+
+
+
+
+<style>
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 9999;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9998;
+	}
+	
+.popup img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+}
+</style>
+</head>
+<body>
+
+
+<div class="overlay" id="overlay"></div>
+<div class="overlay" id="overlay"></div>
+<div class="popup" id="popup">
+    <img id="popupimage" src="" alt="Imagem">
+	<div style="padding-top:10px">
+    <button onclick="closePopup()" style="cursor: pointer; display: inline-block; background-color: #007bff; color: #fff; padding: 6px 10px; text-decoration: none; border-radius: 5px;">Close</button>
+	</div>
+</div>
+
+<script>
+
+function openPopup(imagem) {
+
+	
+    document.getElementById('overlay').style.display = 'block';
+	document.getElementById('popupimage').src =imagem;
+    document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('popup').style.display = 'none';
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+  const urlParams = new URLSearchParams(window.location.search);
+    const Pasta = urlParams.get('Pasta');
+  const Ensaio = urlParams.get('Ensaio');
+
+  
+
+	if(Pasta=='OK'){
+	document.write('<h2 style="color:green">Inferences OK: '+Ensaio+'</h2>');
+	}else{
+	document.write('<h2 style="color:red">Inferences NOK: '+Ensaio+'</h2>');
+	}
+	
+
+	 document.write('<h4 style="color:white">Nota: São apresentadas as primeiras 200 inferencias disponiveis </h2>');
+	for (var i = 0; i <= 200; i++) {
+		
+		
+		
+		try{
+		
+		document.write('<td><p style=" width: 300px; vertical-align: top; font-weight: bold; color: white; background-color: #1A5C8D;">Image Forder Nr.: '+i+'</p> </td>');
+
+		
+		document.write('<tr>');
+		document.write('<td><img src="../'+Ensaio+'/Infer/'+Pasta+'/'+i+'/Image_1.png" ></td>');
+		document.write('<td><img src="../'+Ensaio+'/Infer/'+Pasta+'/'+i+'/Image_3.png" ></td>');
+		document.write('<td><img src="../'+Ensaio+'/Infer/'+Pasta+'/'+i+'/Image_2.png" ></td>');
+
+
+		document.write('</tr>');
+		}catch{}
+
+        document.write("</table>");
+		document.write('</br>');
+		document.write('<a onclick="openPopup(\'../'+Ensaio+'/Infer/'+Pasta+'/'+i+'/OriginalImage.bmp\')" style="cursor: pointer; display: inline-block; background-color: #007bff; color: #fff; padding: 6px 10px; text-decoration: none; border-radius: 5px;">Open Original Image</a>');
+		document.write("</br>");
+        document.write("</br>");
+		document.write("</br>");
+		document.write("</br>");
+    }
+	
+
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1205FAU21 DeepLearning Train Dynamic Results Summary</title>
+</head>
+<body style="background-color:black">
+
+
+<h1 style="font-weight: bold; color: white; background-color: #1A5C8D; padding: 40px;">1205FAU21 DeepLearning Train Dynamic Results Summary</h1>
+<a href="../index.html" style="display: inline-block; background-color: #007bff; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;"> <---   Last Page</a>
+
+
+<script>
+
+  
+		
+
+  var Ensaios = 
+		["H011InSRi", 
+		"H011PsSRi", 
+		"H013Bs_Mo",
+		"H013Bs_Ri1",
+		"H013Bs_Ri2",
+		"H013Bs_Ri3",
+		"H013Bs_Ri4",
+		"H013Tu_Mo",
+		"H013TuSRi1",
+		"H013TuSRi2"]; 
+
+
+
+
+for (var i = 0; i <= 9; i++) {
+	
+	  
+		let Ensaio=Ensaios[i];
+		document.write('<h2 style="font-weight: bold; color: white; background-color: #1A5C8D;padding-bottom:10px;">Test: '+Ensaio+'</h2>');
+		document.write('<table border="0">');
+		
+		
+
+
+		document.write("<tr>");
+		document.write('<td><img id="imagem" src="'+Ensaio+'/Confusion_Matrix/Confusion_Matrix_Image_2.png" alt="Imagem 2"></td>');
+		document.write('<td><img src="'+Ensaio+'/Confusion_Matrix/Confusion_Matrix_Image_3.png" alt="Imagem 1"></td>');
+		document.write('<td style="vertical-align: top"><img src="'+Ensaio+'/Confusion_Matrix/Confusion_Matrix_Image_1.png" alt="Imagem 3"></td>');
+		document.write('</tr>');
+		document.write('<tr>'); 
+		document.write('<td><img src="'+Ensaio+'/Histogram/Image_Histogram.png"></td>');
+		document.write('<td><img src="'+Ensaio+'/Histogram/Image_legend.png" ></td>');
+		document.write('<td></td>');
+		document.write('</tr>');
+		document.write('<tr>');
+		document.write('<td><img src="'+Ensaio+'/Infer/0/Confusion_Matrix_Image_1.png" alt="Imagem 5"></td>');
+		document.write('<td><img src="'+Ensaio+'/Infer/0/Confusion_Matrix_Image_3.png" alt="Imagem 5"></td>');
+		document.write('<td><img src="'+Ensaio+'/Infer/0/Confusion_Matrix_Image_2.png" alt="Imagem 5"></td>');
+		document.write('</tr>');
+		document.write('</tr>');
+		document.write("</table>");
+		document.write("<br>");
+
+		document.write('<a href="Dynamic_Results_Pages/Dynamic_Results_By_Test_Name.html?Ensaio='+Ensaio+'" style="display: inline-block; background-color: #007bff; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">More Images Test '+Ensaio+'</a>');
+	
+        document.write("<br>");
+		document.write("<br>");
+		document.write("<br>")
+		
+
+
+		
+    }
+	
+	
+	
+	
+	
+	
+	
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

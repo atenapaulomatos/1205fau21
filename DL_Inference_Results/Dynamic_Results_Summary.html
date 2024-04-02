@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1205FAU21 DeepLearning Inference Dynamic Results Summary</title>
+</head>
+<body style="background-color:black">
+
+
+<h1 style="font-weight: bold; color: white; background-color: #1A5C8D; padding: 40px;">1205FAU21 DeepLearning Inference Dynamic Results Summary</h1>
+<a href="../index.html" style="display: inline-block; background-color: #007bff; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;"> <---   Last Page</a>
+
+<style>
+    .divline {
+        background-color: gray;
+        width: 50%;
+		height: 2px;
+    }
+</style>
+
+
+
+<script>
+
+  
+		
+
+  var Ensaios = 
+		["H011InSRi", 
+		"H011PsSRi", 
+		"H013Bs_Mo",
+		"H013Bs_Ri1",
+		"H013Bs_Ri2",
+		"H013Bs_Ri3",
+		"H013Bs_Ri4",
+		"H013Tu_Mo",
+		"H013TuSRi1",
+		"H013TuSRi2"]; 
+
+
+
+
+for (var i = 0; i <= 9; i++) {
+	
+	  
+		let Ensaio=Ensaios[i];
+
+		document.write('<h2 style=" width: 300px; vertical-align: top; font-weight: bold; color: white; background-color: #1A5C8D;">Inferences: '+Ensaio+'</h2>');
+		document.write('<img id="imagem" src="'+Ensaio+'/Summary/Infer_Results.png" alt="Imagem">');
+		document.write("</br>");
+		document.write('<a href="Dynamic_Results_Pages/Dynamic_Results_By_Test_Name.html?Ensaio='+Ensaio+'&Pasta=OK" style="display: inline-block; background-color: green; color: #fff; margin-right: 20px; padding:10px 20px; text-decoration: none; border-radius: 5px;">Open OK Page</a>');
+		
+		document.write('<a href="Dynamic_Results_Pages/Dynamic_Results_By_Test_Name.html?Ensaio='+Ensaio+'&Pasta=NOK" style="display: inline-block; background-color: red; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Open NOK Page</a>');
+	
+		document.write('<div style="padding-top:30px"> </div>');
+		document.write('<div class="divline"> </div>');
+		
+		document.write("</br>");
+
+
+
+
+		
+    }
+	
+	
+	
+	
+	
+	
+	
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

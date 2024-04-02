@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1205FAU21 DeepLearning Train Dynamic Results Summary</title>
+</head>
+<body style="background-color:black">
+
+
+<h1 style="font-weight: bold; color: white; background-color: #1A5C8D; padding: 40px;">1205FAU21 DeepLearning Train Dynamic Results Summary</h1>
+<a href="../Dynamic_Results_Summary.html" style="display: inline-block; background-color: #007bff; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;"> <---   Main Page</a>
+
+<script>
+  // Recuperando o valor do parâmetro da URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const Ensaio = urlParams.get('Ensaio');
+
+
+	 document.write('<h2 style="color:white">Test: '+Ensaio+'</h2>');
+	 document.write('<h4 style="color:white">Nota: São apresentadas as primeiras 200 inferencias disponiveis </h2>');
+	for (var i = 0; i <= 200; i++) {
+		
+		
+		
+		try{
+		
+		document.write('<td><p style=" width: 300px; vertical-align: top; font-weight: bold; color: white; background-color: #1A5C8D;">Image Forder Nr.: '+i+'</p></td>');
+
+		
+		document.write('<tr>');
+		document.write('<td><img src="../'+Ensaio+'/Infer/'+i+'/Confusion_Matrix_Image_1.png" ></td>');
+		document.write('<td><img src="../'+Ensaio+'/Infer/'+i+'/Confusion_Matrix_Image_3.png" ></td>');
+		document.write('<td><img src="../'+Ensaio+'/Infer/'+i+'/Confusion_Matrix_Image_2.png" ></td>');
+		document.write('</tr>');
+		}catch{}
+
+        
+
+        document.write("</table>");
+        document.write("<br>");
+    }
+	
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
